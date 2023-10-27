@@ -1,0 +1,212 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* VARIABLES */
+
+:root {
+  --PADDING-LEFT: 15px;
+}
+
+/* ************* */
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+}
+
+.container {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
+  grid-template-rows: 100px 80px 1fr;
+}
+
+/* Navigation Section start */
+
+.nav {
+  grid-area: 1/2/2/4;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+}
+
+.nav-subgrid1 {
+  display: grid;
+  grid-template-columns: min-content 80%;
+  align-items: center;
+  padding-left: var(--PADDING-LEFT);
+  gap: 15px;
+}
+
+input[type="search"] {
+  appearance: none;
+  height: 40px;
+  border-radius: 20px;
+  font-size: inherit;
+  padding: 5px;
+}
+
+.nav-subgrid2 {
+  display: grid;
+  grid-template-columns: repeat(3, max-content);
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  font-weight: bold;
+}
+
+.profile-logo {
+}
+
+/* Navigation Section ends */
+
+/* Header Section Starts */
+
+.header {
+  grid-area: 2/2/3/4;
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+}
+
+.header-subgrid1 {
+  display: grid;
+  grid-template-columns: max-content max-content;
+  padding-left: var(--PADDING-LEFT);
+  gap: 15px;
+}
+
+.header-subgrid1 > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.header-subgrid2 {
+  display: grid;
+  grid-template-columns: repeat(3, min-content);
+  justify-content: center;
+  gap: 20px;
+}
+
+.header-subgrid2 > button {
+  font-size: inherit;
+  padding: 10px 35px;
+  border-radius: 20px;
+  background-color: rgb(12, 174, 255);
+}
+
+/* Header Section Ends */
+
+/* Aside Left Section Starts */
+
+.aside-left {
+  grid-area: 1/1/4/2;
+  padding-left: var(--PADDING-LEFT);
+  padding-top: var(--PADDING-LEFT);
+  display: grid;
+  grid-template-rows: repeat(3, max-content);
+  gap: 40px;
+  background-color: rgb(12, 174, 255);
+  color: white;
+}
+
+.aside-left-grid1,
+.aside-left-grid2,
+.aside-left-grid3 {
+  display: grid;
+  grid-template-columns: 40px max-content;
+  gap: 15px;
+  align-items: center;
+}
+
+.aside-left-grid2 img,
+.aside-left-grid3 img {
+  justify-self: center;
+}
+
+/* Aside Left Section Ends */
+
+/* Project Section Starts */
+
+.project-ctn {
+  grid-area: 3/2/4/3;
+  border: 1px solid rebeccapurple;
+  padding: 15px 8px 0;
+  display: flex;
+  row-gap: 20px;
+  flex-direction: column;
+  background-color: grey;
+}
+
+.all-cards-ctn {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.project-card-ctn {
+  width: 280px;
+  height: 200px;
+  padding: 15px 30px;
+  border: 2px solid cyan;
+  border-left: 10px solid yellow;
+  display: grid;
+  grid-template-rows: max-content 70%;
+}
+
+.card-options {
+  display: flex;
+  justify-content: flex-end;
+  gap: 15px;
+}
+
+/* Project Section Ends */
+
+/* Aside Right Section Starts */
+
+.aside-right {
+  grid-area: 3/3/4/4;
+  border: 4px solid purple;
+  display: grid;
+  grid-template-rows: repeat(2, max-content);
+  background-color: rgba(127, 255, 212, 0.482);
+  gap: 25px;
+}
+
+.announcement-ctn {
+  display: flex;
+  flex-direction: column;
+}
+
+.announcement-subgrid {
+  display: grid;
+  grid-template-rows: repeat(3, max-content);
+  background-color: white;
+}
+
+.announcement-text-cnt {
+  border: 3px solid red;
+  padding: 15px;
+}
+
+.trending-ctn {
+  display: flex;
+  flex-direction: column;
+}
+
+.trending-subgrid {
+  display: grid;
+  grid-template-rows: repeat(4, max-content);
+  background-color: white;
+}
+
+.trending-info-ctn {
+  display: flex;
+  padding: 15px;
+}
