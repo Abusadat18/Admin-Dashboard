@@ -10,26 +10,35 @@
 
 :root {
   --PADDING-LEFT: 30px;
+  --BORDER: 10px;
 }
 
 /* ************* */
 
 body {
   font-family: "Roboto", sans-serif;
-  font-size: 16px;
+  font-size: 18px;
 }
 
 .container {
   height: 100vh;
   display: grid;
   grid-template-columns: 1fr 5fr;
-  grid-template-rows: 100px 80px 1fr;
+  grid-template-rows: 180px 1fr;
 }
 
 /* Navigation Section start */
 
-.nav {
+.top-container {
   grid-area: 1/2/2/3;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  box-shadow: 0 1px 5px #739072;
+  z-index: 10;
+  color: #3a4d39;
+}
+
+.nav {
   display: grid;
   grid-template-columns: 2fr 1fr;
 }
@@ -65,7 +74,6 @@ input[type="search"] {
 /* Header Section Starts */
 
 .header {
-  grid-area: 2/2/3/3;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   align-items: center;
@@ -95,8 +103,10 @@ input[type="search"] {
   font-size: inherit;
   padding: 10px 35px;
   border-radius: 20px;
-  background-color: #739072;
-  color: #ece3ce;
+  background-color: #ece3ce;
+  color: inherit;
+  font-weight: bold;
+  border: 2px solid #3a4d39;
 }
 
 /* Header Section Ends */
@@ -104,14 +114,27 @@ input[type="search"] {
 /* Aside Left Section Starts */
 
 .aside-left {
-  grid-area: 1/1/4/2;
+  grid-area: 1/1/3/2;
   padding-left: 15px;
   padding-top: 15px;
   display: grid;
   grid-template-rows: repeat(3, max-content);
-  gap: 40px;
+  gap: 70px;
   background-color: #739072;
   color: #ece3ce;
+  font-weight: bold;
+}
+
+.aside-left img,
+.aside-right img {
+  filter: invert(97%) sepia(1%) saturate(2711%) hue-rotate(356deg)
+    brightness(97%) contrast(90%);
+}
+
+.top-container img,
+.project-ctn img {
+  filter: invert(26%) sepia(15%) saturate(893%) hue-rotate(69deg)
+    brightness(88%) contrast(82%);
 }
 
 .aside-left-grid1,
@@ -119,7 +142,8 @@ input[type="search"] {
 .aside-left-grid3 {
   display: grid;
   grid-template-columns: 40px max-content;
-  gap: 15px;
+  column-gap: 15px;
+  row-gap: 25px;
   align-items: center;
 }
 
@@ -133,15 +157,16 @@ input[type="search"] {
 /* Project Section Starts */
 
 .project-section {
-  grid-area: 3/2/4/3;
+  grid-area: 2/2/3/3;
   display: grid;
-  grid-template-columns: 4fr 1fr;
-  gap: 15px;
+  grid-template-columns: 3fr 1fr;
   background-color: #ece3ce;
+  padding: 30px;
+  padding-bottom: 0;
+  color: #3a4d39;
 }
 
 .project-ctn {
-  padding: 15px 8px 0;
   display: flex;
   row-gap: 20px;
   flex-direction: column;
@@ -149,18 +174,27 @@ input[type="search"] {
 
 .all-cards-ctn {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(375px, 1fr));
+  gap: 30px;
 }
 
 .project-card-ctn {
-  width: 280px;
-  height: 200px;
-  padding: 15px 30px;
-  border: 2px solid cyan;
-  border-left: 10px solid #739072;
+  width: 375px;
+  height: 250px;
+  padding: 30px;
+  background-color: #739072;
+  border-left: 10px solid #3a4d39;
+  color: #ece3ce;
   display: grid;
-  grid-template-rows: max-content 70% max-content;
+  border-radius: var(--BORDER);
+  grid-template-rows: 70% max-content;
+  gap: 30px;
+}
+
+.card-text {
+  display: flex;
+  flex-direction: column;
+  row-gap: 15px;
 }
 
 .card-options {
@@ -176,35 +210,56 @@ input[type="search"] {
 .aside-right {
   display: grid;
   grid-template-rows: repeat(2, 1fr);
-  gap: 25px;
+  gap: 30px;
 }
 
 .announcement-ctn {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-rows: max-content 1fr;
+  gap: 20px;
 }
 
 .announcement-subgrid {
   display: grid;
-  grid-template-rows: repeat(3, max-content);
+  grid-template-rows: repeat(3, 1fr);
+  background-color: #739072;
+  color: #ece3ce;
+  justify-content: center;
+  border-radius: var(--BORDER);
+  /* padding: 5px 0; */
 }
 
 .announcement-text-cnt {
-  border: 3px solid red;
-  padding: 15px;
+  border-bottom: 4px solid #3a4d39;
+  width: 210px;
+  padding: 10px 5px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 5px;
+}
+
+.announcement-text-cnt:last-child {
+  border: none;
 }
 
 .trending-ctn {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-rows: max-content max-content;
+  gap: 20px;
 }
 
 .trending-subgrid {
   display: grid;
-  grid-template-rows: repeat(4, max-content);
+  grid-template-rows: repeat(4, 1fr);
+  background-color: #739072;
+  color: #ece3ce;
+  justify-content: center;
+  border-radius: var(--BORDER);
 }
 
 .trending-info-ctn {
   display: flex;
+  column-gap: 10px;
   padding: 15px;
+  align-items: center;
 }

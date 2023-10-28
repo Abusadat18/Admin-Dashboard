@@ -8,52 +8,55 @@
   </head>
   <body>
     <div class="container">
-      <div class="nav">
-        <div class="nav-subgrid1">
-          <label for="searchBar"
-            ><img
-              src="./icons/magnify.svg"
-              alt="search icon"
+      <div class="top-container">
+        <div class="nav">
+          <div class="nav-subgrid1">
+            <label for="searchBar"
+              ><img
+                src="./icons/magnify.svg"
+                alt="search icon"
+                width="30"
+                height="30"
+            /></label>
+            <input type="search" name="searchBar" id="searchBar" />
+          </div>
+          <div class="nav-subgrid2">
+            <img
+              src="./icons/bell-ring.svg"
+              alt="bell-ring icon"
               width="25"
               height="25"
-          /></label>
-          <input type="search" name="searchBar" id="searchBar" />
-        </div>
-        <div class="nav-subgrid2">
-          <img
-            src="./icons/bell-ring.svg"
-            alt="bell-ring icon"
-            width="25"
-            height="25"
-          />
-          <img
-            src="./icons/account-circle.svg"
-            alt="profile picture"
-            width="50"
-            height="50"
-          />
-          <p>Abdullah Ansari</p>
-        </div>
-      </div>
-      <div class="header">
-        <div class="header-subgrid1">
-          <img
-            src="./icons/account-circle.svg"
-            alt="profile picture"
-            width="60"
-            height="60"
-          />
-          <div>
-            <p>Hi, there</p>
-            <h3>Abdullah Ansari (@abdullah)</h3>
+            />
+            <img
+              src="./icons/account-circle.svg"
+              alt="profile picture"
+              width="50"
+              height="50"
+            />
+            <p>Abdullah Ansari</p>
           </div>
         </div>
-        <div class="header-subgrid2">
-          <button type="button">New</button>
-          <button type="button">Upload</button>
-          <button type="button">Share</button>
+        <div class="header">
+          <div class="header-subgrid1">
+            <img
+              src="./icons/account-circle.svg"
+              alt="profile picture"
+              width="60"
+              height="60"
+            />
+            <div>
+              <p>Hi, there</p>
+              <h3>Abdullah Ansari (@abdullah)</h3>
+            </div>
+          </div>
+          <div class="header-subgrid2">
+            <button type="button">New</button>
+            <button type="button">Upload</button>
+            <button type="button">Share</button>
+          </div>
         </div>
       </div>
+
       <div class="aside-left">
         <div class="aside-left-grid1">
           <img
@@ -129,11 +132,13 @@
           </div>
           <div class="all-cards-ctn">
             <div class="project-card-ctn">
-              <h3>Super Cool Project</h3>
-              <p>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                Consequatur, pariatur.
-              </p>
+              <div class="card-text">
+                <h3>Super Cool Project</h3>
+                <p>
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                  Consequatur, pariatur.
+                </p>
+              </div>
               <div class="card-options">
                 <img
                   src="./icons/star-plus-outline.svg"
@@ -156,12 +161,14 @@
               </div>
             </div>
             <div class="project-card-ctn">
-              <h3>Less Cool Project</h3>
-              <p>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Culpa,
-                dolorem commodi. Aut vitae in corrupti a, veniam ex! Eveniet
-                consequuntur?
-              </p>
+              <div class="card-text">
+                <h3>Less Cool Project</h3>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                  Culpa, dolorem commodi. Aut vitae in corrupti a, veniam ex!
+                  Eveniet consequuntur?
+                </p>
+              </div>
               <div class="card-options">
                 <img
                   src="./icons/star-plus-outline.svg"
@@ -184,8 +191,10 @@
               </div>
             </div>
             <div class="project-card-ctn">
-              <h3>Random App</h3>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+              <div class="card-text">
+                <h3>Random App</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+              </div>
               <div class="card-options">
                 <img
                   src="./icons/star-plus-outline.svg"
@@ -208,11 +217,13 @@
               </div>
             </div>
             <div class="project-card-ctn">
-              <h3>Easy Peasy App</h3>
-              <p>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                Consequuntur obcaecati saepe ea quae!
-              </p>
+              <div class="card-text">
+                <h3>Easy Peasy App</h3>
+                <p>
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                  Consequuntur obcaecati saepe ea quae!
+                </p>
+              </div>
               <div class="card-options">
                 <img
                   src="./icons/star-plus-outline.svg"
@@ -235,11 +246,13 @@
               </div>
             </div>
             <div class="project-card-ctn">
-              <h3>Ad Blocker</h3>
-              <p>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                Officiis, corrupti ipsum.
-              </p>
+              <div class="card-text">
+                <h3>Ad Blocker</h3>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                  Officiis, corrupti ipsum.
+                </p>
+              </div>
               <div class="card-options">
                 <img
                   src="./icons/star-plus-outline.svg"
@@ -262,11 +275,13 @@
               </div>
             </div>
             <div class="project-card-ctn">
-              <h3>Money Maker</h3>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse,
-                ex ipsum! Alias eos aspernatur delectus nobis ratione fugit?
-              </p>
+              <div class="card-text">
+                <h3>Money Maker</h3>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse,
+                  ex ipsum! Alias eos aspernatur delectus nobis ratione fugit?
+                </p>
+              </div>
               <div class="card-options">
                 <img
                   src="./icons/star-plus-outline.svg"
@@ -305,15 +320,14 @@
                 <h4>Community Share Day</h4>
                 <p>
                   Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eos,
-                  nulla? Rem illum consectetur maxime eos aliquam!.
+                  nulla?
                 </p>
               </div>
               <div class="announcement-text-cnt">
                 <h4>Updated Privacy Policy</h4>
                 <p>
                   Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Distinctio possimus repellendus totam rerum nisi iure minima
-                  consequatur dignissimos magni?
+                  Distinctio possimus repellendus
                 </p>
               </div>
             </div>
@@ -325,8 +339,8 @@
                 <img
                   src="./icons/account-circle.svg"
                   alt=""
-                  width="40"
-                  height="40"
+                  width="50"
+                  height="50"
                 />
                 <div class="trending-text">
                   <p>@tegan</p>
@@ -337,31 +351,37 @@
                 <img
                   src="./icons/account-circle.svg"
                   alt=""
-                  width="40"
-                  height="40"
+                  width="50"
+                  height="50"
                 />
-                <p>@tegan</p>
-                <p>World Peace Builder</p>
+                <div class="trending-text">
+                  <p>@morgan</p>
+                  <p>Super Cool Project</p>
+                </div>
               </div>
               <div class="trending-info-ctn">
                 <img
                   src="./icons/account-circle.svg"
                   alt=""
-                  width="40"
-                  height="40"
+                  width="50"
+                  height="50"
                 />
-                <p>@tegan</p>
-                <p>World Peace Builder</p>
+                <div class="trending-text">
+                  <p>@binod</p>
+                  <p>Life Changing App</p>
+                </div>
               </div>
               <div class="trending-info-ctn">
                 <img
                   src="./icons/account-circle.svg"
                   alt=""
-                  width="40"
-                  height="40"
+                  width="50"
+                  height="50"
                 />
-                <p>@tegan</p>
-                <p>World Peace Builder</p>
+                <div class="trending-text">
+                  <p>@alex</p>
+                  <p>No Traffic Maker</p>
+                </div>
               </div>
             </div>
           </div>
