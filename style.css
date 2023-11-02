@@ -44,12 +44,7 @@ body {
 
 .nav {
   display: grid;
-  grid-template-columns: 2fr 1fr;
-}
-
-.nav-subgrid1 {
-  display: grid;
-  grid-template-columns: min-content auto;
+  grid-template-columns: min-content 70% min-content min-content max-content;
   align-items: center;
   padding-left: var(--PADDING-LEFT);
   gap: 15px;
@@ -67,15 +62,6 @@ input[type="search"] {
   font-size: inherit;
   padding: 5px;
   background-color: var(--LIGHT-COLOR);
-}
-
-.nav-subgrid2 {
-  display: grid;
-  grid-template-columns: repeat(3, max-content);
-  align-items: center;
-  justify-content: center;
-  gap: 20px;
-  font-weight: bold;
 }
 
 /* Navigation Section ends */
