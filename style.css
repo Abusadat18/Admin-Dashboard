@@ -14,6 +14,7 @@
   --GREEN: #739072;
   --DARK-GREEN: #3a4d39;
   --LIGHT-COLOR: #ece3ce;
+  --WHITE: #fff;
 }
 
 /* ************* */
@@ -24,8 +25,6 @@ body {
 }
 
 .container {
-  border: 5px solid rebeccapurple;
-  height: 100%;
   display: grid;
   grid-template-columns: 1fr 5fr;
   grid-template-rows: 180px 1fr;
@@ -40,19 +39,51 @@ body {
   box-shadow: 0 1px 5px var(--GREEN);
   z-index: 10;
   color: var(--DARK-GREEN);
+  background-color: var(--WHITE);
+  gap: 15px;
 }
 
 .nav {
   display: grid;
-  grid-template-columns: min-content 70% min-content min-content max-content;
+  grid-template-columns: 2fr 1fr;
   align-items: center;
   padding-left: var(--PADDING-LEFT);
+  padding-right: var(--PADDING-LEFT);
   gap: 15px;
+}
+
+.nav-subgrid1 {
+  display: grid;
+  grid-template-columns: 40px 1fr;
+  gap: 7px;
+}
+
+.hamburger-menu {
+  display: none;
+}
+
+.nav-subgrid2 {
+  display: grid;
+  grid-template-columns: min-content min-content max-content;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.nav-subgrid2 > img,
+.nav-subgrid2 > p {
+  cursor: pointer;
+}
+
+.nav-userName:hover,
+.nav-userName:focus {
+  text-decoration: underline;
 }
 
 .search-logo-label {
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 
 input[type="search"] {
@@ -70,28 +101,24 @@ input[type="search"] {
 
 .header {
   display: grid;
-  grid-template-columns: auto auto;
-  align-items: center;
+  grid-template-columns: 1fr min-content;
+  padding-left: var(--PADDING-LEFT);
+  padding-right: var(--PADDING-LEFT);
+  background-color: var(--WHITE);
 }
 
 .header-subgrid1 {
   display: grid;
   grid-template-columns: min-content max-content;
-  padding-left: var(--PADDING-LEFT);
-  gap: 15px;
-}
-
-.header-subgrid1 > div {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  align-items: center;
+  gap: 10px;
 }
 
 .header-subgrid2 {
   display: grid;
   grid-template-columns: repeat(3, min-content);
-  justify-content: center;
-  gap: 30px;
+  gap: 25px;
+  align-items: center;
 }
 
 .header-subgrid2 > button {
@@ -103,6 +130,13 @@ input[type="search"] {
   font-weight: bold;
   border: 2px solid var(--DARK-GREEN);
   width: 100px;
+  cursor: pointer;
+}
+
+.header-subgrid2 > button:hover,
+.header-subgrid2 > button:focus {
+  background-color: var(--GREEN);
+  color: var(--LIGHT-COLOR);
 }
 
 /* Header Section Ends */
@@ -111,14 +145,17 @@ input[type="search"] {
 
 .aside-left {
   grid-area: 1/1/3/2;
-  padding-left: 20px;
-  padding-top: 23px;
+  padding: 23px 20px 0;
   display: grid;
   grid-template-rows: repeat(3, min-content);
   gap: 70px;
   background-color: var(--GREEN);
   color: var(--LIGHT-COLOR);
   font-weight: bold;
+  position: sticky;
+  top: 0;
+  align-self: start;
+  height: 100dvh;
 }
 
 .aside-left img,
@@ -176,7 +213,6 @@ input[type="search"] {
 }
 
 .project-ctn {
-  border: 2px solid red;
   display: flex;
   row-gap: 20px;
   flex-direction: column;
@@ -234,16 +270,17 @@ input[type="search"] {
   color: var(--LIGHT-COLOR);
   justify-content: center;
   border-radius: var(--BORDER);
-  padding: 5px 0;
+  padding: 5px;
 }
 
 .announcement-text-cnt {
   border-bottom: 4px solid var(--DARK-GREEN);
   width: 210px;
-  padding: 10px 5px;
+  padding: 10px;
   display: flex;
   flex-direction: column;
   row-gap: 5px;
+  justify-content: center;
 }
 
 .announcement-text-cnt:last-child {
@@ -273,3 +310,54 @@ input[type="search"] {
 }
 
 /* Project Section Ends */
+
+@media screen and (max-width: 985px) {
+  body {
+    font-size: 16px;
+  }
+
+  .top-container {
+    padding-top: 10px;
+    padding-bottom: 15px;
+  }
+
+  .project-section {
+    grid-template-rows: repeat(3, min-content);
+    grid-template-columns: 1fr;
+  }
+
+  .nav {
+    grid-template-columns: 1fr min-content;
+  }
+
+  .nav-subgrid2 {
+    grid-template-columns: min-content 1fr;
+  }
+
+  .nav-profile,
+  .nav-userName {
+    display: none;
+  }
+
+  .hamburger-menu {
+    display: block;
+    justify-self: end;
+    cursor: pointer;
+  }
+
+  .header {
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .header-subgrid1 > img {
+    width: 45px;
+    height: 45px;
+  }
+
+  .header-subgrid2 > button {
+    font-size: 12px;
+    width: 75px;
+  }
+}
